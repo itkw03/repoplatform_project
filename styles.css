@@ -1,14 +1,18 @@
+* {
+    font-family: "Nunito", sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
     background-color: #000000;
     margin: 0;
     padding: 0;
     height: 100vh;
 }
 
-.background-image{
+.background-image {
     background-image: url('./background-home-bnw.jpg'); /* Replace with your image path */
     height: 100%;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,47 +21,35 @@ body {
     align-items: center;
 }
 
-.container {
-    width: 80%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    text-align: center;
-    color: #4D5372;
-}
-
-form {
+.form-container {
+    width: 100vw;
+    height: 60%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
-label {
-    margin: 10px 0 5px;
-    color: #2C9596;
-}
-
-input, textarea, button {
-    padding: 10px;
-    margin: 5px 0 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.logo-container {
     width: 100%;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#main-logo {
+    width: 200px;
 }
 
 button {
-    background-color: #6AC9CA;
-    color: #fff;
+    background-color: #68e7e9;
+    color: #000000;
     border: none;
     cursor: pointer;
     font-size: 16px;
-    border-radius: 25px;
+    border-radius: 20px;
     padding: 15px;
+    font-weight: 600;
 }
 
 button:hover {
@@ -65,28 +57,33 @@ button:hover {
 }
 
 @media (max-width: 600px) {
-    .container {
+    .form-container {
+        padding: 10px;
+    }
+
+    #main-logo {
+        width: 150px;
+    }
+
+    button {
+        font-size: 14px;
         padding: 10px;
     }
 }
 
-.form-container {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    height: 60%;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
 #sign-in-button {
-    background-color: #6AC9CA;
-    color: #fff;
+    background-color: #68e7e9;
+    color: #000000;
     border: none;
     cursor: pointer;
     font-size: 16px;
     border-radius: 25px;
-    margin-top: 70vh;
+    width: 80%;
+    max-width: 400px;
+    padding: 15px;
+    font-weight: 600;
+    position: absolute; /* Position the button absolutely */
+    bottom: 40px; /* Distance from the bottom of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
 }
